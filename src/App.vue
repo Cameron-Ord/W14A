@@ -1,28 +1,142 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="apex_parent">
+    <header class="page_header">
+      <span>
+        <h1>LOGO</h1>
+
+        <h1>MENU</h1>
+      </span>
+    </header>
+
+    <main class="page_main">
+      <section class="section_main">
+        <article class="article_songlist">
+
+
+
+        </article>
+        <article class="article_playlist">
+
+
+        </article>
+        <article class="article_playing">
+
+
+        </article>
+      </section>
+    </main>
+
+    <footer class="page_footer">
+      <span>
+        <p>placeholder footer text</p>
+        <p>placeholder footer text</p>
+
+      </span>
+    </footer>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+ 
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+
+*{
+
+padding: 0px;
+margin: 0px;
+
+}
+
+
+.apex_parent{
+
+
+  display: grid;
+
+  justify-items: center;
+
+  align-items: center;
+
+}
+
+.apex_parent>.page_header{
+
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+  justify-items: center;
+
+  align-items: center;
+
+  min-height: 10vh;
+
+
+}
+
+.apex_parent>.page_header>span{
+
+
+  display: grid;
+
+  align-items: center;
+
+  justify-items: center;
+
+  grid-template-columns: 40vw 40vw;
+
+
+}
+
+
+.apex_parent>.page_main{
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+  display: grid;
+
+  align-items: center;
+
+  justify-items: center;
+
+  min-height: 80vh;
+
+}
+
+
+.apex_parent>.page_footer{
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+  display: grid;
+
+  min-height: 10vh;
+ 
+  align-items: center;
+
+  justify-items: center;
+ 
+
+}
+
+.apex_parent>.page_footer>span{
+
+  display: grid;
+
+  align-items: center;
+
+  justify-items: center;
+
+  grid-template-columns: 1fr 1fr;
+
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+
 }
 </style>
