@@ -19,6 +19,7 @@
         </article>
         <article class="article_playlist">
 
+          <play-list v-for="(chosen_song, i) in chosen_songs" :key="i" :chosen_song="chosen_songs[i]"></play-list>
 
         </article>
         <article class="article_playing">
@@ -40,26 +41,40 @@
 
 <script>
 import SongList from './components/SongList.vue';
-
+import PlayList from './components/PlayList.vue';
 export default {
 
+
+data() {
+  return {
+   
+    chosen_songs: [{}]
+
+  }
+},
 
 
   methods:{
 
 
-    chosen_song(){
+    chosen_song(song){
+
+      this.chosen_songs = song;
 
       console.log(`i work`);
+
     }
 
   },
+
+
 
 
   name: 'App',
   components: {
  
     SongList,
+    PlayList
 
   }
 }
