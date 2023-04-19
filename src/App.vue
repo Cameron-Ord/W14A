@@ -13,6 +13,8 @@
         <article class="article_songlist">
 
 
+          <song-list @choose_song="chosen_song"></song-list>
+
 
         </article>
         <article class="article_playlist">
@@ -37,12 +39,28 @@
 </template>
 
 <script>
-
+import SongList from './components/SongList.vue';
 
 export default {
+
+
+
+  methods:{
+
+
+    chosen_song(){
+
+      console.log(`i work`);
+    }
+
+  },
+
+
   name: 'App',
   components: {
  
+    SongList,
+
   }
 }
 </script>
