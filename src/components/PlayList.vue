@@ -3,7 +3,7 @@
 
         <span>
 
-            <button v-for="(playlist_song, i) in playlist_songs" :key="i" @click="play_song">{{ playlist_song.title }} - {{ playlist_song.artist }}</button>
+            <button v-for="(chosen_song, i) in chosen_songs" :key="i" @click="play">{{ chosen_song }} </button>
 
         </span>
 
@@ -18,24 +18,24 @@
 
 
 
+            chosen_song: Array,
+
 
 
         },
 
 
-        data() {
-            return {
-                playlist_songs:[{}]
-            }
-        },
+
 
 
         methods:{
 
+            play(){
 
-            play_song(){
+                
 
-                this.$emit(`play_song`, this.playlist_song);
+                console.log(`playlist works`);
+
             }
 
 

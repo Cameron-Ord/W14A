@@ -19,7 +19,7 @@
         </article>
         <article class="article_playlist">
 
-          <play-list v-for="(chosen_song, i) in chosen_songs" :key="i" :chosen_song="chosen_songs[i]"></play-list>
+          <play-list v-for="(chosen_song, i) in chosen_songs" :key="i" :chosen_songs="chosen_songs"></play-list>
 
         </article>
         <article class="article_playing">
@@ -48,7 +48,7 @@ export default {
 data() {
   return {
    
-    chosen_songs: [{}]
+    chosen_songs: []
 
   }
 },
@@ -59,9 +59,22 @@ data() {
 
     chosen_song(song){
 
-      this.chosen_songs = song;
+      if(song !== undefined){
+
+
+      this.chosen_songs.push(song);
+      
 
       console.log(`i work`);
+
+
+      }else{
+
+        console.log(`i dont work`);
+
+      }
+
+      
 
     }
 
