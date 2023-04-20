@@ -40,7 +40,7 @@
               {
 
 
-                    title: `Roller Mobster`,
+                    title: `Le perv`,
 
                     artist: `Carpenter Brut`,
 
@@ -53,7 +53,7 @@
                 {
 
 
-                    title: `Roller Mobster`,
+                    title: `Meet Matt Stryker`,
 
                     artist: `Carpenter Brut`,
 
@@ -66,7 +66,7 @@
                 {
 
 
-                    title: `Roller Mobster`,
+                    title: `Turbo Killer`,
 
                     artist: `Carpenter Brut`,
 

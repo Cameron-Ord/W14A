@@ -19,11 +19,12 @@
         </article>
         <article class="article_playlist">
 
-          <play-list :chosen_songs="chosen_songs"></play-list>
+          <play-list @send_play="the_song" :chosen_songs="chosen_songs"></play-list>
 
         </article>
         <article class="article_playing">
 
+          <now-playing :play_songs="play_songs"></now-playing>
 
         </article>
       </section>
@@ -42,13 +43,20 @@
 <script>
 import SongList from './components/SongList.vue';
 import PlayList from './components/PlayList.vue';
+import NowPlaying from './components/NowPlaying.vue';
 export default {
 
 
 data() {
   return {
    
-    chosen_songs: []
+    chosen_songs: [],
+
+
+
+    play_songs:[]
+
+
 
   }
 },
@@ -76,6 +84,27 @@ data() {
 
       
 
+    },
+
+
+    the_song(chosen_song){
+
+
+      if(chosen_song !== undefined){
+
+
+        this.play_songs.push(chosen_song);
+
+
+        console.log(`the_song - I do work`);
+
+      }else{
+
+
+        console.log(`the_song - I do not work `);
+      }
+
+
     }
 
   },
@@ -87,7 +116,8 @@ data() {
   components: {
  
     SongList,
-    PlayList
+    PlayList,
+    NowPlaying
 
   }
 }
