@@ -50,7 +50,7 @@
 
                     image_url: `https://m.media-amazon.com/images/I/51PHl1VZO3L._AC_SX342_.jpg`,
 
-                    src: require(`../assets/mobster.mp3`)
+                    src: require(`../assets/leperv.mp3`)
 
                 },
 
@@ -65,7 +65,7 @@
 
                     image_url: `https://m.media-amazon.com/images/I/51PHl1VZO3L._AC_SX342_.jpg`,
 
-                    src: require(`../assets/mobster.mp3`)
+                    src: require(`../assets/mattstryker.mp3`)
 
                 },
 
@@ -80,7 +80,7 @@
 
                     image_url: `https://m.media-amazon.com/images/I/51PHl1VZO3L._AC_SX342_.jpg`,
 
-                    src: require(`../assets/mobster.mp3`)
+                    src: require(`../assets/turbokiller.mp3`)
 
                 },
             
@@ -123,5 +123,47 @@
 </script>
 
 <style scoped>
+.songlist_parent{
 
+    display: grid;
+
+    width: 100%;
+
+    justify-items: center;
+
+align-items: center;
+
+grid-template-rows: 50vh;
+
+}
+
+.songlist_parent>.songlist{
+
+    background-color: #A3CEF1;
+
+    display: grid;
+
+    justify-items: center;
+
+    align-items: center;
+
+    grid-auto-flow: row;
+
+    width: 90%;
+
+    padding-top: 50px;
+
+    padding-bottom: 50px;
+
+    border-radius: 25px;
+}
+
+.songlist_parent>.songlist>button{
+
+
+    margin-bottom: 5px;
+    margin-top: 5px;
+    height: 50px;
+    width: 90%;
+}
 </style>

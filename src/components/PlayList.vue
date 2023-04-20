@@ -1,6 +1,8 @@
 <template>
     <div class="playlist_parent">
 
+        <span class="funny_span">
+
         <span class="button_playlist">
 
             <button class="play_song_send" :play_song="i" v-for="(chosen_song, i) in chosen_songs" :key="i" @click="play(chosen_song)">{{ chosen_song.title }} - {{ chosen_song.artist }}</button>
@@ -12,11 +14,11 @@
         <span class="information">
 
 
-            <h2 v-if="!song_selected">Pick a song</h2>
+            <h2 class="variable" v-if="!song_selected">Pick a song</h2>
 
-            <h2 v-else-if="paused_aspect"> Paused </h2>
+            <h2 class="variable" v-else-if="paused_aspect"> Paused </h2>
 
-            <p v-else-if="song_selected">Now Playing</p>
+            <p class="variable" v-else-if="song_selected">Now Playing</p>
 
 
         </span>
@@ -31,6 +33,7 @@
             <button>NEXT</button>
 
         </span>
+    </span>
     </div>
 </template>
 
@@ -150,23 +153,109 @@
 
 display: grid;
 
+width: 100%;
+
+justify-items: center;
+
+align-items: center;
+
+text-align: center;
+
+
+
 }
 
-.playlist_parent>.button_playlist{
+
+.variable{
 
 display: grid;
 
+margin-top: 20px;
+
+margin-bottom: 20px;
+
+}
+.playlist_parent>.funny_span{
+    display: grid;
+
+    justify-items: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    width: 90%;
+
+    background-color: #A3CEF1;
+    
+    grid-auto-flow: row;
+
+    padding-top: 50px;
+
+    padding-bottom: 50px;
+
+    border-radius: 25px;
+
 }
 
-.playlist_parent>.information{
+.playlist_parent>.funny_span>.button_playlist{
 
 display: grid;
+
+justify-items: center;
+
+align-items: center;
+
+text-align: center;
+
+grid-auto-flow: row;
+
+width: 90%;
+
+
+
 }
 
-.playlist_parent>.controls{
+.playlist_parent>.funny_span>.button_playlist>button{
+    margin-bottom: 5px;
+    margin-top: 5px;
+    height: 50px;
+    width: 90%;
+}
+
+.playlist_parent>.funny_span>.information{
 
 display: grid;
 
+justify-items: center;
 
+align-items: center;
+
+text-align: center;
+
+width: 90%;
+}
+
+.playlist_parent>.funny_span>.controls{
+
+display: grid;
+
+justify-items: center;
+
+align-items: center;
+
+text-align: center;
+
+grid-template-columns: 1fr 1fr 1fr;
+
+width: 90%;
+
+
+}
+.playlist_parent>.funny_span>.controls>button{
+    margin-bottom: 5px;
+    margin-top: 5px;
+    height: 50px;
+    width: 80%;
 }
 </style>
