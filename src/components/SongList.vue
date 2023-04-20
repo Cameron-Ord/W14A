@@ -33,7 +33,9 @@
 
                     song_id: 35251,
 
-                    image_url: `https://m.media-amazon.com/images/I/51PHl1VZO3L._AC_SX342_.jpg`
+                    image_url: `https://m.media-amazon.com/images/I/51PHl1VZO3L._AC_SX342_.jpg`,
+
+                    src: require(`../assets/mobster.mp3`)
 
                 },
 
@@ -46,7 +48,9 @@
 
                     song_id: 91231,
 
-                    image_url: `https://m.media-amazon.com/images/I/51PHl1VZO3L._AC_SX342_.jpg`
+                    image_url: `https://m.media-amazon.com/images/I/51PHl1VZO3L._AC_SX342_.jpg`,
+
+                    src: require(`../assets/mobster.mp3`)
 
                 },
 
@@ -59,7 +63,9 @@
 
                     song_id: 82811,
 
-                    image_url: `https://m.media-amazon.com/images/I/51PHl1VZO3L._AC_SX342_.jpg`
+                    image_url: `https://m.media-amazon.com/images/I/51PHl1VZO3L._AC_SX342_.jpg`,
+
+                    src: require(`../assets/mobster.mp3`)
 
                 },
 
@@ -72,7 +78,9 @@
 
                     song_id: 75312,
 
-                    image_url: `https://m.media-amazon.com/images/I/51PHl1VZO3L._AC_SX342_.jpg`
+                    image_url: `https://m.media-amazon.com/images/I/51PHl1VZO3L._AC_SX342_.jpg`,
+
+                    src: require(`../assets/mobster.mp3`)
 
                 },
             

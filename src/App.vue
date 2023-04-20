@@ -13,18 +13,18 @@
         <article class="article_songlist">
 
 
-          <song-list @choose_song="chosen_song"></song-list>
+          <song-list @choose_song="chosen_song_function"></song-list>
 
 
         </article>
         <article class="article_playlist">
 
-          <play-list @send_play="the_song" :chosen_songs="chosen_songs"></play-list>
+          <play-list @play="current_obj" :chosen_songs="chosen_songs"></play-list>
 
         </article>
         <article class="article_playing">
 
-          <now-playing :play_songs="play_songs"></now-playing>
+          <now-playing v-for="(dispaly_mono, i) in display_current" :key="i" :display_mono="display_current[i]"></now-playing>
 
         </article>
       </section>
@@ -53,9 +53,7 @@ data() {
     chosen_songs: [],
 
 
-
-    play_songs:[]
-
+    display_current: []
 
 
   }
@@ -65,9 +63,9 @@ data() {
   methods:{
 
 
-    chosen_song: function(song){
+    chosen_song_function: function(song){
 
-      if(song !== undefined){
+      if(song.src !== undefined){
 
 
       this.chosen_songs.push(song);
@@ -87,21 +85,19 @@ data() {
     },
 
 
-    the_song(chosen_song){
+
+    current_obj(current){
+
+      if(current.title !== undefined){
 
 
-      if(chosen_song !== undefined){
+        console.log(`current obj not undefined`);
 
-
-        this.play_songs.push(chosen_song);
-
-
-        console.log(`the_song - I do work`);
+        this.display_current.push(current);
 
       }else{
 
-
-        console.log(`the_song - I do not work `);
+        console.log(`undefined current obj`);
       }
 
 
