@@ -24,7 +24,7 @@
         </article>
         <article class="article_playing">
 
-          <now-playing v-for="(dispaly_mono, i) in display_current" :key="i" :display_mono="display_current[i]"></now-playing>
+          <now-playing :display_current="display_current"></now-playing>
 
         </article>
       </section>
@@ -53,7 +53,7 @@ data() {
     chosen_songs: [],
 
 
-    display_current: []
+    display_current: {}
 
 
   }
@@ -93,7 +93,7 @@ data() {
 
         console.log(`current obj not undefined`);
 
-        this.display_current.push(current);
+        this.display_current = current;
 
       }else{
 

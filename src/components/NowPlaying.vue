@@ -4,9 +4,11 @@
         <span>
 
 
-            <h3>{{ display_mono.title }}</h3>
+            <h3>{{ display_current.title }}</h3>
 
-            <h3>{{ display_mono.artist }}</h3>
+            <h3>{{ display_current.artist }}</h3>
+
+            <img v-bind:src="display_current.image_url">
             
 
         </span>
@@ -22,7 +24,7 @@
 
         props:{
 
-            display_mono: Object,
+            display_current: Object,
          
         },
 
