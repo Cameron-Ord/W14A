@@ -142,7 +142,7 @@
                 this.isPlaying = true;
             },
 
-            //a pause button that changes respecting values//
+            //a pause button that changes respective values//
 
             pause(){
 
