@@ -5,6 +5,9 @@
 
         <span class="button_playlist">
 
+            <!--a loop that will create a button and display a song title and artist for each object the array chosen_songs contains-->
+
+              <!-- also calls the play function on click-->
             <button class="play_song_send" :play_song="i" v-for="(chosen_song, i) in chosen_songs" :key="i" @click="play(chosen_song)">{{ chosen_song.title }} - {{ chosen_song.artist }}</button>
 
 
@@ -12,6 +15,8 @@
         </span>
 
         <span class="information">
+
+            <!-- some if statements that display depending on false or true values-->
 
 
             <h2 class="variable" v-if="!song_selected">Pick a song</h2>
@@ -23,6 +28,8 @@
 
         </span>
         <span class="controls">
+
+            <!-- a play and pause button that change the values of variables affecting what messages are shown, and pausing/playing audio-->
 
             <button>PREV</button>
 
@@ -44,6 +51,7 @@
         data() {
             return {
             
+                //data containing variables and objects//
 
                 current: {},
 
@@ -63,6 +71,7 @@
         props:{
 
 
+            //the passed array from App.vue//
 
             chosen_songs: Array,
 
@@ -76,6 +85,8 @@
 
         methods:{
 
+            //if chosen_song.src is not undefined, changes values //
+         
 
             play(chosen_song){
 
@@ -98,6 +109,8 @@
 
                 }
 
+                //if current.title is defined, it will emit the current object, which is then sent to NowPlaying//
+
                 if(typeof this.current.title !==undefined){
 
                 
@@ -106,6 +119,8 @@
 
 
                 }
+
+                //making the song play, and changing the isPlaying variable to true last// 
 
                 this.current = this.chosen_songs[this.index];
 
@@ -118,6 +133,7 @@
 
             },
 
+            //a simple play button seperate from the buttons on the playlist//
 
             play_button(){
 
@@ -126,6 +142,7 @@
                 this.isPlaying = true;
             },
 
+            //a pause button that changes respecting values//
             pause(){
 
 

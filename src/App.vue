@@ -12,6 +12,7 @@
       <section class="section_main">
         <article class="article_songlist">
 
+          <!--passing and receiving objects and arrays-->
 
           <song-list @choose_song="chosen_song_function"></song-list>
 
@@ -40,6 +41,7 @@
   </div>
 </template>
 
+<!--importing the components-->
 <script>
 import SongList from './components/SongList.vue';
 import PlayList from './components/PlayList.vue';
@@ -50,6 +52,8 @@ export default {
 data() {
   return {
    
+    //data for the passed objects//
+
     chosen_songs: [],
 
 
@@ -62,6 +66,8 @@ data() {
 
   methods:{
 
+    //pushing the passed object song into the chosen_songs array//
+
 
     chosen_song_function: function(song){
 
@@ -70,6 +76,7 @@ data() {
 
       this.chosen_songs.push(song);
       
+      //console logs for debugging if it is undefined//
 
       console.log(`i work`);
 
@@ -84,7 +91,9 @@ data() {
 
     },
 
+    //taking the passed current object from the PlayList component, checking if it's defined,//
 
+    //then, if it is defined, it will be equal to the display_current object//
 
     current_obj(current){
 

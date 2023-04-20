@@ -1,6 +1,7 @@
 <template>
     <div class="playing_parent">
 
+        <!--if display_current title/aritst/image_url are all defined, then it will display the imported data from app-->
         <span v-if="display_current.title !==undefined" class="playing_span">
 
 
@@ -20,6 +21,7 @@
     export default {
 
 
+        //receiving the object from App.vue//
     
         props:{
 

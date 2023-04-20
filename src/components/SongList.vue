@@ -3,6 +3,7 @@
 
         <span class="songlist">
 
+            <!--a loop for each of the objects in the array, displaying the title and artist of each object-->
 
             <button :clicked_song="i" v-for="(song, i) in songs" :key="i" @click="choose_song">{{ song.title }} - {{ song.artist }}</button>
 
@@ -22,6 +23,7 @@
                 
                 
 
+                //song data in an array of objects//
 
                 songs:[
                     
@@ -96,20 +98,31 @@
 
             choose_song: function(details){
 
+                //defining the song object using attributes/indexing to target the button that is clicked//
 
     
+
+                //button will equal the details.currentTarget//
+
                let button = details.currentTarget;
+
+
+               //button_clicker is now equal to the clicked_song attribute which has a value of counter or i//
 
 
                let button_clicker = button.getAttribute(`clicked_song`);
 
 
+               //song equals the song chosen from the array, indexed by the button_clicker//
+
                let song = this.songs[button_clicker];
 
 
+               //logs details to find currentTarget//
                 console.log(details);
 
 
+                //emits the song object to it's parent//
                 this.$emit(`choose_song`, song);
             },
 
