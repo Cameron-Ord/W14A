@@ -183,7 +183,25 @@ margin: 0px;
 
 }
 
+.apex_parent>.page_main>.section_main{
 
+
+}
+
+.apex_parent>.page_main>.section_main>.article_playing{
+
+  
+}
+
+.apex_parent>.page_main>.section_main>.article_songlist{
+
+
+}
+
+.apex_parent>.page_main>.section_main>.article_playlist{
+
+
+}
 .apex_parent>.page_footer{
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 
