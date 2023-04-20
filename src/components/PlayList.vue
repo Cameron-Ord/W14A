@@ -85,7 +85,7 @@
 
         methods:{
 
-            //if chosen_song.src is not undefined, changes values //
+            //if chosen_song.src is not undefined, changes respective values //
          
 
             play(chosen_song){
