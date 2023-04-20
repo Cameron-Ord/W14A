@@ -4,8 +4,9 @@
         <span class="songlist">
 
 
-            <button v-for="(song, i) in songs" :key="i" @click="choose_song">{{ song.title }} - {{ song.artist }}</button>
+            <button :clicked_song="i" v-for="(song, i) in songs" :key="i" @click="choose_song">{{ song.title }} - {{ song.artist }}</button>
 
+            
         </span>
 
     </div>
@@ -85,9 +86,23 @@
 
 
 
-            choose_song(){
+            choose_song: function(details){
 
-                this.$emit(`choose_song`, this.song);
+
+    
+               let button = details.currentTarget;
+
+
+               let button_clicker = button.getAttribute(`clicked_song`);
+
+
+               let song = this.songs[button_clicker];
+
+
+                console.log(details);
+
+
+                this.$emit(`choose_song`, song);
             },
 
 

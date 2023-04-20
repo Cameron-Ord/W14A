@@ -19,7 +19,7 @@
         </article>
         <article class="article_playlist">
 
-          <play-list v-for="(chosen_song, i) in chosen_songs" :key="i" :chosen_songs="chosen_songs"></play-list>
+          <play-list :chosen_songs="chosen_songs"></play-list>
 
         </article>
         <article class="article_playing">
@@ -57,7 +57,7 @@ data() {
   methods:{
 
 
-    chosen_song(song){
+    chosen_song: function(song){
 
       if(song !== undefined){
 

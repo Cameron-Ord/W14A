@@ -3,7 +3,7 @@
 
         <span>
 
-            <button v-for="(chosen_song, i) in chosen_songs" :key="i" @click="play">{{ chosen_song }} </button>
+            <button v-for="(chosen_song, i) in chosen_songs" :key="i" @click="play">{{ chosen_song.title }} </button>
 
         </span>
 
@@ -18,7 +18,7 @@
 
 
 
-            chosen_song: Array,
+            chosen_songs: Array,
 
 
 
@@ -30,7 +30,9 @@
 
         methods:{
 
-            play(){
+            play: function(){
+
+
 
                 
 
