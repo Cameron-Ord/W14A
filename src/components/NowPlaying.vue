@@ -1,14 +1,14 @@
 <template>
     <div class="playing_parent">
 
-        <span class="playing_span">
+        <span v-if="display_current.title !==undefined" class="playing_span">
 
 
-            <h3>{{ display_current.title }}</h3>
+            <h3 v-if="display_current.title !==undefined" >{{ display_current.title }}</h3>
 
-            <h3>{{ display_current.artist }}</h3>
+            <h3 v-if="display_current.artist !==undefined" >{{ display_current.artist }}</h3>
 
-            <img v-bind:src="display_current.image_url">
+            <img v-if="display_current.image_url !==undefined" v-bind:src="display_current.image_url">
             
 
         </span>
@@ -19,9 +19,8 @@
 <script>
     export default {
 
-        
 
-
+    
         props:{
 
             display_current: Object,
@@ -37,6 +36,12 @@
             }
         },
 
+
+        methods:{
+
+
+
+        },
 
 
 
