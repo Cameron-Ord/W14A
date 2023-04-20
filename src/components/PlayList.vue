@@ -51,7 +51,7 @@
         data() {
             return {
             
-                //data containing variables and objects//
+                //data containing values and objects//
 
                 current: {},
 
@@ -143,6 +143,7 @@
             },
 
             //a pause button that changes respecting values//
+
             pause(){
 
 
