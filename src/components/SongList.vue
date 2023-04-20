@@ -5,28 +5,29 @@
 
             <!--a loop for each of the objects in the array, displaying the title and artist of each object-->
 
-            <button :clicked_song="i" v-for="(song, i) in songs" :key="i" @click="choose_song">{{ song.title }} - {{ song.artist }}</button>
+            <button :clicked_song="i" v-for="(song, i) in songs" :key="i" @click="choose_song">{{ song.title }} - {{
+                song.artist }}</button>
 
-            
+
         </span>
 
     </div>
 </template>
 
 <script>
-    export default {
+export default {
 
-        
 
-        data() {
-            return {
-                
-                
 
-                //song data in an array of objects//
+    data() {
+        return {
 
-                songs:[
-                    
+
+
+            //song data in an array of objects//
+
+            songs: [
+
                 {
 
                     title: `Roller Mobster`,
@@ -41,7 +42,7 @@
 
                 },
 
-              {
+                {
 
 
                     title: `Le perv`,
@@ -85,58 +86,58 @@
                     src: require(`../assets/turbokiller.mp3`)
 
                 },
-            
+
             ]
 
 
-            }
+        }
+    },
+
+    methods: {
+
+
+
+        choose_song: function (details) {
+
+            //defining the song object using attributes/indexing to target the button that is clicked//
+
+
+
+            //button will equal the details.currentTarget//
+
+            let button = details.currentTarget;
+
+
+            //button_clicker is now equal to the clicked_song attribute which has a value of counter or i//
+
+
+            let button_clicker = button.getAttribute(`clicked_song`);
+
+
+            //song equals the song chosen from the array, indexed by the button_clicker//
+
+            let song = this.songs[button_clicker];
+
+
+            //logs details to find currentTarget//
+            console.log(details);
+
+
+            //emits the song object to it's parent//
+            this.$emit(`choose_song`, song);
         },
 
-        methods:{
 
-
-
-            choose_song: function(details){
-
-                //defining the song object using attributes/indexing to target the button that is clicked//
-
-    
-
-                //button will equal the details.currentTarget//
-
-               let button = details.currentTarget;
-
-
-               //button_clicker is now equal to the clicked_song attribute which has a value of counter or i//
-
-
-               let button_clicker = button.getAttribute(`clicked_song`);
-
-
-               //song equals the song chosen from the array, indexed by the button_clicker//
-
-               let song = this.songs[button_clicker];
-
-
-               //logs details to find currentTarget//
-                console.log(details);
-
-
-                //emits the song object to it's parent//
-                this.$emit(`choose_song`, song);
-            },
-
-
-
-
-        }
 
 
     }
+
+
+}
 </script>
 
 <style scoped>
-.songlist_parent{
+.songlist_parent {
 
     display: grid;
 
@@ -144,13 +145,13 @@
 
     justify-items: center;
 
-align-items: center;
+    align-items: center;
 
-grid-template-rows: 50vh;
+    grid-template-rows: 50vh;
 
 }
 
-.songlist_parent>.songlist{
+.songlist_parent>.songlist {
 
     background-color: #A3CEF1;
 
@@ -171,7 +172,7 @@ grid-template-rows: 50vh;
     border-radius: 25px;
 }
 
-.songlist_parent>.songlist>button{
+.songlist_parent>.songlist>button {
 
 
     margin-bottom: 5px;

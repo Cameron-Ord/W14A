@@ -49,45 +49,45 @@ import NowPlaying from './components/NowPlaying.vue';
 export default {
 
 
-data() {
-  return {
-   
-    //data for the passed objects//
+  data() {
+    return {
 
-    chosen_songs: [],
+      //data for the passed objects//
 
-
-    display_current: {}
+      chosen_songs: [],
 
 
-  }
-},
+      display_current: {}
 
 
-  methods:{
+    }
+  },
+
+
+  methods: {
 
     //pushing the passed object song into the chosen_songs array//
 
 
-    chosen_song_function: function(song){
+    chosen_song_function: function (song) {
 
-      if(song.src !== undefined){
-
-
-      this.chosen_songs.push(song);
-      
-      //console logs for debugging if it is undefined//
-
-      console.log(`i work`);
+      if (song.src !== undefined) {
 
 
-      }else{
+        this.chosen_songs.push(song);
+
+        //console logs for debugging if it is undefined//
+
+        console.log(`i work`);
+
+
+      } else {
 
         console.log(`i dont work`);
 
       }
 
-      
+
 
     },
 
@@ -95,16 +95,16 @@ data() {
 
     //then, if it is defined, it will be equal to the display_current object//
 
-    current_obj(current){
+    current_obj(current) {
 
-      if(current.title !== undefined){
+      if (current.title !== undefined) {
 
 
         console.log(`current obj not undefined`);
 
         this.display_current = current;
 
-      }else{
+      } else {
 
         console.log(`undefined current obj`);
       }
@@ -119,7 +119,7 @@ data() {
 
   name: 'App',
   components: {
- 
+
     SongList,
     PlayList,
     NowPlaying
@@ -129,21 +129,20 @@ data() {
 </script>
 
 <style>
+* {
 
-*{
-
-padding: 0px;
-margin: 0px;
+  padding: 0px;
+  margin: 0px;
 
 }
 
-body{
+body {
 
 
   background-color: #E7ECEF;
 }
 
-.apex_parent{
+.apex_parent {
 
 
   display: grid;
@@ -154,7 +153,7 @@ body{
 
 }
 
-.apex_parent>.page_header{
+.apex_parent>.page_header {
 
   display: grid;
 
@@ -172,7 +171,7 @@ body{
 
 }
 
-.apex_parent>.page_header>span{
+.apex_parent>.page_header>span {
 
 
   display: grid;
@@ -187,7 +186,7 @@ body{
 }
 
 
-.apex_parent>.page_main{
+.apex_parent>.page_main {
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 
   display: grid;
@@ -201,10 +200,10 @@ body{
   width: 100%;
 }
 
-.apex_parent>.page_main>.section_main{
+.apex_parent>.page_main>.section_main {
 
   display: grid;
- 
+
   grid-auto-flow: row;
 
   align-items: center;
@@ -216,7 +215,7 @@ body{
   margin-bottom: 50px;
 }
 
-.apex_parent>.page_main>.section_main>.article_playing{
+.apex_parent>.page_main>.section_main>.article_playing {
 
   display: grid;
 
@@ -234,7 +233,7 @@ body{
 
 }
 
-.apex_parent>.page_main>.section_main>.article_songlist{
+.apex_parent>.page_main>.section_main>.article_songlist {
 
 
   margin-top: 25px;
@@ -248,11 +247,11 @@ body{
   width: 100%;
 }
 
-.apex_parent>.page_main>.section_main>.article_playlist{
+.apex_parent>.page_main>.section_main>.article_playlist {
 
   margin-top: 25px;
 
-margin-bottom: 25px;
+  margin-bottom: 25px;
 
   display: grid;
 
@@ -262,14 +261,15 @@ margin-bottom: 25px;
 
   width: 100%;
 }
-.apex_parent>.page_footer{
+
+.apex_parent>.page_footer {
 
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 
   display: grid;
 
   min-height: 10vh;
- 
+
   align-items: center;
 
   justify-items: center;
@@ -277,11 +277,11 @@ margin-bottom: 25px;
   background-color: #A3CEF1;
 
   width: 100%;
- 
+
 
 }
 
-.apex_parent>.page_footer>span{
+.apex_parent>.page_footer>span {
 
   display: grid;
 
